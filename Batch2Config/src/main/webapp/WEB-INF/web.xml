@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <servlet>
+  		<servlet-name>Chinna</servlet-name>
+  		<servlet-class>com.config.Config</servlet-class>
+  		<init-param>
+  				<param-name>driver</param-name>
+  				<param-value>com.sql.jdbc.Driver</param-value>
+  		</init-param>
+  		<init-param>
+  				<param-name>url</param-name>
+  				<param-value>jdbc:mysql://localhost:3306/test</param-value>
+  		
+  		</init-param>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>Chinna</servlet-name>
+  		<url-pattern>/Config</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  			<servlet-name>vijay</servlet-name>
+  			<servlet-class>com.config.Second</servlet-class>
+  			<init-param>
+  				<param-name>driver</param-name>
+  				<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+  			
+  			</init-param>
+  			<init-param>
+  				<param-name>url</param-name>
+  				<param-value>jdbc:oracle:thin:@localhost:1521:xe</param-value>
+  			</init-param>
+  </servlet>
+  <servlet-mapping>
+  			<servlet-name>vijay</servlet-name>
+			<url-pattern>/Second</url-pattern>
+  			
+  </servlet-mapping>
+  
+  
+  
+  
+</web-app>
